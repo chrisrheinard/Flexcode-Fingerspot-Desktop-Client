@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace FingerspotClient
 {
-    public partial class UC_VerifNasabah : UserControl
+    public partial class FormTambahAlat : Form
     {
-        public UC_VerifNasabah()
+        public FormTambahAlat()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.Cancel;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

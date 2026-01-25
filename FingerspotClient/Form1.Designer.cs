@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerspotClient));
             this.PanelSidebar = new System.Windows.Forms.Panel();
+            this.PanelSidebarFooter = new System.Windows.Forms.Panel();
+            this.LBL_Copyright = new System.Windows.Forms.Label();
+            this.LBL_Version = new System.Windows.Forms.Label();
             this.BTN_ListAlat = new System.Windows.Forms.Button();
             this.BTN_LogNasabah = new System.Windows.Forms.Button();
             this.BTN_VerifNasabah = new System.Windows.Forms.Button();
@@ -42,13 +45,10 @@
             this.ButtonMax = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.PanelMain = new System.Windows.Forms.Panel();
-            this.PanelSidebarFooter = new System.Windows.Forms.Panel();
-            this.LBL_Version = new System.Windows.Forms.Label();
-            this.LBL_Copyright = new System.Windows.Forms.Label();
             this.PanelSidebar.SuspendLayout();
+            this.PanelSidebarFooter.SuspendLayout();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.PanelSidebarFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSidebar
@@ -66,12 +66,46 @@
             this.PanelSidebar.Size = new System.Drawing.Size(246, 561);
             this.PanelSidebar.TabIndex = 0;
             // 
+            // PanelSidebarFooter
+            // 
+            this.PanelSidebarFooter.Controls.Add(this.LBL_Copyright);
+            this.PanelSidebarFooter.Controls.Add(this.LBL_Version);
+            this.PanelSidebarFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelSidebarFooter.Location = new System.Drawing.Point(0, 497);
+            this.PanelSidebarFooter.Name = "PanelSidebarFooter";
+            this.PanelSidebarFooter.Size = new System.Drawing.Size(246, 64);
+            this.PanelSidebarFooter.TabIndex = 5;
+            // 
+            // LBL_Copyright
+            // 
+            this.LBL_Copyright.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LBL_Copyright.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Copyright.ForeColor = System.Drawing.Color.Silver;
+            this.LBL_Copyright.Location = new System.Drawing.Point(0, 28);
+            this.LBL_Copyright.Name = "LBL_Copyright";
+            this.LBL_Copyright.Size = new System.Drawing.Size(246, 36);
+            this.LBL_Copyright.TabIndex = 7;
+            this.LBL_Copyright.Text = "© 2026 Christian Rheinard Sadeko\r\nAll rights reserved.";
+            this.LBL_Copyright.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // LBL_Version
+            // 
+            this.LBL_Version.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LBL_Version.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Version.ForeColor = System.Drawing.Color.Silver;
+            this.LBL_Version.Location = new System.Drawing.Point(0, 0);
+            this.LBL_Version.Name = "LBL_Version";
+            this.LBL_Version.Size = new System.Drawing.Size(246, 28);
+            this.LBL_Version.TabIndex = 6;
+            this.LBL_Version.Text = "v1.0.0 (25 Jan 2026)";
+            this.LBL_Version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BTN_ListAlat
             // 
             this.BTN_ListAlat.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_ListAlat.FlatAppearance.BorderSize = 0;
             this.BTN_ListAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_ListAlat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BTN_ListAlat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_ListAlat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_ListAlat.Location = new System.Drawing.Point(0, 184);
             this.BTN_ListAlat.Name = "BTN_ListAlat";
@@ -86,7 +120,7 @@
             this.BTN_LogNasabah.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_LogNasabah.FlatAppearance.BorderSize = 0;
             this.BTN_LogNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_LogNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BTN_LogNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_LogNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_LogNasabah.Location = new System.Drawing.Point(0, 138);
             this.BTN_LogNasabah.Name = "BTN_LogNasabah";
@@ -101,7 +135,7 @@
             this.BTN_VerifNasabah.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_VerifNasabah.FlatAppearance.BorderSize = 0;
             this.BTN_VerifNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_VerifNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BTN_VerifNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_VerifNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_VerifNasabah.Location = new System.Drawing.Point(0, 92);
             this.BTN_VerifNasabah.Name = "BTN_VerifNasabah";
@@ -116,7 +150,7 @@
             this.BTN_ListNasabah.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_ListNasabah.FlatAppearance.BorderSize = 0;
             this.BTN_ListNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_ListNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BTN_ListNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_ListNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_ListNasabah.Location = new System.Drawing.Point(0, 46);
             this.BTN_ListNasabah.Name = "BTN_ListNasabah";
@@ -131,7 +165,7 @@
             this.BTN_RegisNasabah.Dock = System.Windows.Forms.DockStyle.Top;
             this.BTN_RegisNasabah.FlatAppearance.BorderSize = 0;
             this.BTN_RegisNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_RegisNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BTN_RegisNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_RegisNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_RegisNasabah.Location = new System.Drawing.Point(0, 0);
             this.BTN_RegisNasabah.Name = "BTN_RegisNasabah";
@@ -159,7 +193,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.label1.Location = new System.Drawing.Point(39, 0);
             this.label1.Name = "label1";
@@ -233,40 +267,6 @@
             this.PanelMain.Size = new System.Drawing.Size(954, 561);
             this.PanelMain.TabIndex = 2;
             // 
-            // PanelSidebarFooter
-            // 
-            this.PanelSidebarFooter.Controls.Add(this.LBL_Copyright);
-            this.PanelSidebarFooter.Controls.Add(this.LBL_Version);
-            this.PanelSidebarFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelSidebarFooter.Location = new System.Drawing.Point(0, 497);
-            this.PanelSidebarFooter.Name = "PanelSidebarFooter";
-            this.PanelSidebarFooter.Size = new System.Drawing.Size(246, 64);
-            this.PanelSidebarFooter.TabIndex = 5;
-            // 
-            // LBL_Version
-            // 
-            this.LBL_Version.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LBL_Version.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LBL_Version.ForeColor = System.Drawing.Color.Silver;
-            this.LBL_Version.Location = new System.Drawing.Point(0, 0);
-            this.LBL_Version.Name = "LBL_Version";
-            this.LBL_Version.Size = new System.Drawing.Size(246, 28);
-            this.LBL_Version.TabIndex = 6;
-            this.LBL_Version.Text = "v1.0.0 (25 Jan 2026)";
-            this.LBL_Version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LBL_Copyright
-            // 
-            this.LBL_Copyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LBL_Copyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LBL_Copyright.ForeColor = System.Drawing.Color.Silver;
-            this.LBL_Copyright.Location = new System.Drawing.Point(0, 28);
-            this.LBL_Copyright.Name = "LBL_Copyright";
-            this.LBL_Copyright.Size = new System.Drawing.Size(246, 36);
-            this.LBL_Copyright.TabIndex = 7;
-            this.LBL_Copyright.Text = "© 2026 Christian Rheinard Sadeko\r\nAll rights reserved.";
-            this.LBL_Copyright.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // FingerspotClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,9 +283,9 @@
             this.Text = "FingerspotClient";
             this.Load += new System.EventHandler(this.FingerspotClient_Load);
             this.PanelSidebar.ResumeLayout(false);
+            this.PanelSidebarFooter.ResumeLayout(false);
             this.PanelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.PanelSidebarFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

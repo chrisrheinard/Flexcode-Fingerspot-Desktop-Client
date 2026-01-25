@@ -16,5 +16,12 @@ namespace FingerspotClient
         {
             InitializeComponent();
         }
+
+        private void TXT_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Setiap user mengetik satu huruf, tabel langsung terfilter
+            //DataView dv = dtNasabah.DefaultView;
+            //dv.RowFilter = string.Format("nama_nasabah LIKE '%{0}%'", TXT_Search.Text);
+        }
     }
 }
