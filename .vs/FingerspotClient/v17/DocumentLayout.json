@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|c:\\users\\vexoras\\source\\repos\\fingerspotclient\\fingerspotclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|solutionrelative:fingerspotclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FingerspotClient||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|c:\\users\\vexoras\\source\\repos\\fingerspotclient\\fingerspotclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|solutionrelative:fingerspotclient\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|c:\\users\\vexoras\\source\\repos\\fingerspotclient\\fingerspotclient\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|solutionrelative:fingerspotclient\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|c:\\users\\vexoras\\source\\repos\\fingerspotclient\\fingerspotclient\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{20145D2F-757B-45FE-9FC0-806771BDBB3C}|FingerspotClient\\FingerspotClient.csproj|solutionrelative:fingerspotclient\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FingerspotClient",
+              "DocumentMoniker": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\FingerspotClient.csproj",
+              "RelativeDocumentMoniker": "FingerspotClient\\FingerspotClient.csproj",
+              "ToolTip": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\FingerspotClient.csproj",
+              "RelativeToolTip": "FingerspotClient\\FingerspotClient.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-25T01:22:06.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\.gitignore",
+              "RelativeDocumentMoniker": "FingerspotClient\\.gitignore",
+              "ToolTip": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\.gitignore",
+              "RelativeToolTip": "FingerspotClient\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAAFAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-01-25T00:50:34.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\Form1.cs",
+              "RelativeDocumentMoniker": "FingerspotClient\\Form1.cs",
+              "ToolTip": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\Form1.cs",
+              "RelativeToolTip": "FingerspotClient\\Form1.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAvwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T00:15:10.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\Form1.cs",
+              "RelativeDocumentMoniker": "FingerspotClient\\Form1.cs",
+              "ToolTip": "C:\\Users\\Vexoras\\source\\repos\\FingerspotClient\\FingerspotClient\\Form1.cs [Design]",
+              "RelativeToolTip": "FingerspotClient\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T13:32:31.091Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
