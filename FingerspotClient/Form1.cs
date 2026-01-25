@@ -19,6 +19,12 @@ namespace FingerspotClient
 
             // Mencegah Form menutupi Taskbar saat WindowState = Maximized
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            // Mengaktifkan DoubleBuffering pada Panel via Reflection
+            typeof(Panel).InvokeMember("DoubleBuffered",
+                System.Reflection.BindingFlags.SetProperty | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic,
+                null, PanelMain, new object[] { true });
+
         }
 
         // Memungkinkan drag form tanpa border
@@ -59,6 +65,115 @@ namespace FingerspotClient
                 this.WindowState = FormWindowState.Normal;
                 ButtonMax.Text = "▢";
             }
+        }
+
+        private void showControl(UserControl userControl)
+        {
+            // Bersihkan panel agar halaman sebelumnya hilang
+            PanelMain.Controls.Clear();
+
+            // Atur agar User Control memenuhi seluruh area panel
+            userControl.Dock = DockStyle.Fill;
+
+            // Masukkan User Control ke dalam Panel
+            PanelMain.Controls.Add(userControl);
+
+            // Bawa ke depan agar tidak tertutup elemen lain
+            userControl.BringToFront();
+        }
+
+        private void HighlightButton(Button activeBtn)
+        {
+            // List semua tombol menu kamu
+            Button[] menuButtons = { BTN_RegisNasabah, BTN_ListNasabah, BTN_VerifNasabah, BTN_LogNasabah, BTN_ListAlat };
+
+            foreach (var btn in menuButtons)
+            {
+                if (btn == activeBtn)
+                {
+                    btn.BackColor = Color.FromArgb(52, 152, 219); // Biru Terang (Aktif)
+                    btn.ForeColor = Color.FromArgb(236, 240, 241);
+                }
+                else
+                {
+                    btn.BackColor = Color.FromArgb(44, 62, 80); // Atau warna sidebar asal
+                    btn.ForeColor = Color.FromArgb(236, 240, 241);
+                }
+            }
+        }
+
+        UC_RegisNasabah ucRegisNasabah;
+        UC_ListNasabah ucListNasabah;
+        UC_VerifNasabah ucVerifNasabah;
+        UC_LogNasabah ucLogNasabah;
+        UC_ListAlat ucListAlat;
+
+        private void BTN_RegisNasabah_Click(object sender, EventArgs e)
+        {
+            if (ucRegisNasabah == null)
+            {
+                ucRegisNasabah = new UC_RegisNasabah();
+            }
+            showControl(ucRegisNasabah);
+            HighlightButton(BTN_RegisNasabah);
+        }
+
+        private void BTN_ListNasabah_Click(object sender, EventArgs e)
+        {
+            if (ucListNasabah == null)
+            {
+                ucListNasabah = new UC_ListNasabah();
+            }
+            showControl(ucListNasabah);
+            HighlightButton(BTN_ListNasabah);
+        }
+
+        private void BTN_VerifNasabah_Click(object sender, EventArgs e)
+        {
+            if (ucVerifNasabah == null)
+            {
+                ucVerifNasabah = new UC_VerifNasabah();
+            }
+            showControl(ucVerifNasabah);
+            HighlightButton(BTN_VerifNasabah);
+        }
+
+        private void BTN_LogNasabah_Click(object sender, EventArgs e)
+        {
+            if (ucLogNasabah == null)
+            {
+                ucLogNasabah = new UC_LogNasabah();
+            }
+            showControl(ucLogNasabah);
+            HighlightButton(BTN_LogNasabah);
+        }
+
+        private void BTN_ListAlat_Click(object sender, EventArgs e)
+        {
+            if (ucListAlat == null)
+            {
+                ucListAlat = new UC_ListAlat();
+            }
+            showControl(ucListAlat);
+            HighlightButton(BTN_ListAlat);
+        }
+
+        private void FingerspotClient_Load(object sender, EventArgs e)
+        {
+            BTN_RegisNasabah.PerformClick();
+
+            // Mengambil versi dari Assembly (biasanya formatnya 1.0.0.0)
+            string version = Application.ProductVersion;
+
+            DateTime buildDate = System.IO.File.GetLastWriteTime(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+            // Tampilkan ke label
+            LBL_Version.Text = $"v{version} ({buildDate:dd MMM yyyy})";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
