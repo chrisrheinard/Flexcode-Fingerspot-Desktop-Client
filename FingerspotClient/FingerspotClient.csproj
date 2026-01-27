@@ -96,9 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="helpers\UserSession.cs" />
+    <Compile Include="models\CustomerImage.cs" />
     <Compile Include="models\Device.cs" />
-    <Compile Include="models\LogVerifikasi.cs" />
-    <Compile Include="models\Nasabah.cs" />
+    <Compile Include="models\VerificationLog.cs" />
+    <Compile Include="models\Customer.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="services\AuthService.cs" />
     <Compile Include="services\DatabaseService.cs" />

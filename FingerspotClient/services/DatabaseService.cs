@@ -63,6 +63,7 @@ namespace FingerspotClient.services
                         customer_id INT,
                         image_data LONGBLOB,
                         scan_order INT,
+                        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                         FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE
                     );
 
@@ -76,8 +77,8 @@ namespace FingerspotClient.services
                         device_id INT,
 
                         FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE SET NULL,
-                        FOREIGN KEY (device_id) REFERENCES devices(id) ON DELETE SET NULL,
-                        FOREIGN KEY (user_id) REFERENCES users(id)
+                        FOREIGN KEY (device_id) REFERENCES devices(id) ON DELETE RESTRICT,
+                        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE RESTRICT
                     );";
 
                 using (var cmd = new MySqlCommand(query, conn))

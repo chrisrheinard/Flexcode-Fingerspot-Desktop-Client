@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FingerspotClient.models
 {
-    internal class LogVerifikasi
+    internal class VerificationLog
     {
         public int Id { get; set; }
         public string NasabahId { get; set; }

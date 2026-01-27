@@ -14,5 +14,6 @@ namespace FingerspotClient.models
         public string VerificationCode { get; set; }
         public string ActivationCode { get; set; }
         public string ValidationKey { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }
