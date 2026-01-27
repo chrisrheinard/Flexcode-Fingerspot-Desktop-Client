@@ -180,6 +180,7 @@
             this.BTN_Login.TabIndex = 12;
             this.BTN_Login.Text = "Masuk";
             this.BTN_Login.UseVisualStyleBackColor = false;
+            this.BTN_Login.Click += new System.EventHandler(this.BTN_Login_Click);
             // 
             // PanelSidebarFooter
             // 

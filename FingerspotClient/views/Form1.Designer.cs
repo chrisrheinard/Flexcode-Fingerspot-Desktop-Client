@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FingerspotClient));
             this.PanelSidebar = new System.Windows.Forms.Panel();
             this.PanelSidebarFooter = new System.Windows.Forms.Panel();
@@ -45,10 +46,15 @@
             this.ButtonMax = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.timerKoneksi = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.LBL_StatusServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.PanelSidebar.SuspendLayout();
             this.PanelSidebarFooter.SuspendLayout();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelMain.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSidebar
@@ -261,11 +267,33 @@
             // PanelMain
             // 
             this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.PanelMain.Controls.Add(this.statusStrip1);
             this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMain.Location = new System.Drawing.Point(246, 39);
             this.PanelMain.Name = "PanelMain";
             this.PanelMain.Size = new System.Drawing.Size(954, 561);
             this.PanelMain.TabIndex = 2;
+            // 
+            // timerKoneksi
+            // 
+            this.timerKoneksi.Interval = 5000;
+            this.timerKoneksi.Tick += new System.EventHandler(this.timerKoneksi_Tick);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LBL_StatusServer});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(954, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // LBL_StatusServer
+            // 
+            this.LBL_StatusServer.Name = "LBL_StatusServer";
+            this.LBL_StatusServer.Size = new System.Drawing.Size(42, 17);
+            this.LBL_StatusServer.Text = "Server:";
             // 
             // FingerspotClient
             // 
@@ -286,6 +314,10 @@
             this.PanelSidebarFooter.ResumeLayout(false);
             this.PanelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelMain.ResumeLayout(false);
+            this.PanelMain.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +340,9 @@
         private System.Windows.Forms.Panel PanelSidebarFooter;
         private System.Windows.Forms.Label LBL_Copyright;
         private System.Windows.Forms.Label LBL_Version;
+        private System.Windows.Forms.ToolStripStatusLabel LBL_StatusServer;
+        private System.Windows.Forms.Timer timerKoneksi;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 

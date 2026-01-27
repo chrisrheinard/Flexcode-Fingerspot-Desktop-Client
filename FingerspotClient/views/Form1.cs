@@ -1,13 +1,15 @@
-﻿using System;
+﻿using FingerspotClient.services;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace FingerspotClient
 {
@@ -174,6 +176,31 @@ namespace FingerspotClient
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerKoneksi_Tick(object sender, EventArgs e)
+        {
+            // Jalankan pengecekan di background agar UI tidak patah-patah
+            Task.Run(() => {
+                var dbService = new DatabaseService();
+                bool isAlive = dbService.IsServerReachable();
+                string ipServer = dbService.GetServerIp();
+
+                // Update UI harus lewat Invoke
+                this.Invoke(new MethodInvoker(delegate {
+                    if (isAlive)
+                    {
+                        LBL_StatusServer.Text = $"Server: {ipServer} (Connected)";
+                        LBL_StatusServer.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        LBL_StatusServer.Text = $"Server: {ipServer} (Disconnected)";
+                        LBL_StatusServer.ForeColor = Color.Red;
+                        // Opsional: munculkan notifikasi peringatan
+                    }
+                }));
+            });
         }
     }
 }

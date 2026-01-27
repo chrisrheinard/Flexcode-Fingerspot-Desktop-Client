@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BTN_Batal = new System.Windows.Forms.Button();
             this.LBL_DeviceName = new System.Windows.Forms.Label();
             this.BTN_Tambah = new System.Windows.Forms.Button();
             this.LBL_VK = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.TXT_AC = new System.Windows.Forms.TextBox();
             this.TXT_VC = new System.Windows.Forms.TextBox();
             this.LBL_VC = new System.Windows.Forms.Label();
-            this.BTN_Batal = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TAMBAH ALAT PEREKAM SIDIK JARI BARU";
             // 
+            // BTN_Batal
+            // 
+            this.BTN_Batal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.BTN_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Batal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Batal.Location = new System.Drawing.Point(284, 206);
+            this.BTN_Batal.Name = "BTN_Batal";
+            this.BTN_Batal.Size = new System.Drawing.Size(88, 30);
+            this.BTN_Batal.TabIndex = 22;
+            this.BTN_Batal.Text = "Batal";
+            this.BTN_Batal.UseVisualStyleBackColor = true;
+            this.BTN_Batal.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LBL_DeviceName
             // 
             this.LBL_DeviceName.AutoSize = true;
@@ -136,9 +149,9 @@
             this.LBL_VK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_VK.Location = new System.Drawing.Point(247, 150);
             this.LBL_VK.Name = "LBL_VK";
-            this.LBL_VK.Size = new System.Drawing.Size(151, 15);
+            this.LBL_VK.Size = new System.Drawing.Size(144, 15);
             this.LBL_VK.TabIndex = 21;
-            this.LBL_VK.Text = "Device Verification Key (VK)";
+            this.LBL_VK.Text = "Device Validation Key (VK)";
             // 
             // TXT_DeviceName
             // 
@@ -214,19 +227,6 @@
             this.LBL_VC.Size = new System.Drawing.Size(161, 15);
             this.LBL_VC.TabIndex = 17;
             this.LBL_VC.Text = "Device Verification Code (VC)";
-            // 
-            // BTN_Batal
-            // 
-            this.BTN_Batal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.BTN_Batal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Batal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Batal.Location = new System.Drawing.Point(284, 206);
-            this.BTN_Batal.Name = "BTN_Batal";
-            this.BTN_Batal.Size = new System.Drawing.Size(88, 30);
-            this.BTN_Batal.TabIndex = 22;
-            this.BTN_Batal.Text = "Batal";
-            this.BTN_Batal.UseVisualStyleBackColor = true;
-            this.BTN_Batal.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormTambahAlat
             // 

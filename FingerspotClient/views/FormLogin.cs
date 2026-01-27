@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FingerspotClient.helpers;
+using FingerspotClient.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +65,20 @@ namespace FingerspotClient
 
             // Tampilkan ke label
             LBL_Version.Text = $"v{version} ({buildDate:dd MMM yyyy})";
+        }
+
+        private void BTN_Login_Click(object sender, EventArgs e)
+        {
+            var auth = new AuthService();
+            if (auth.Login(TXT_Username.Text, TXT_Password.Text))
+            {
+                MessageBox.Show($"Selamat datang, {UserSession.Username}!");
+                this.DialogResult = DialogResult.OK; // Ini akan menutup FormLogin dan membuka FormUtama (sesuai logic Program.cs kita)
+            }
+            else
+            {
+                MessageBox.Show("Username atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
