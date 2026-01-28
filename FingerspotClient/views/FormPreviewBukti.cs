@@ -31,5 +31,10 @@ namespace FingerspotClient.views
         {
 
         }
+
+        private void BTN_Close_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }

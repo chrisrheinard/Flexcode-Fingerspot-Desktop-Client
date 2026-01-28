@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.TXT_Search);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 46);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 38);
             this.panel1.TabIndex = 6;
@@ -78,7 +78,7 @@
             this.TXT_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_Search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_Search.Location = new System.Drawing.Point(101, 4);
-            this.TXT_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_Search.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_Search.Name = "TXT_Search";
             this.TXT_Search.Size = new System.Drawing.Size(333, 27);
             this.TXT_Search.TabIndex = 0;
@@ -91,7 +91,7 @@
             this.DGV_ListLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ListLog.Dock = System.Windows.Forms.DockStyle.Top;
             this.DGV_ListLog.Location = new System.Drawing.Point(0, 84);
-            this.DGV_ListLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_ListLog.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_ListLog.Name = "DGV_ListLog";
             this.DGV_ListLog.ReadOnly = true;
             this.DGV_ListLog.RowHeadersVisible = false;
@@ -102,7 +102,6 @@
             // 
             // BTN_Refresh
             // 
-            this.BTN_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Refresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Refresh.Location = new System.Drawing.Point(9, 491);
@@ -116,7 +115,6 @@
             // 
             // BTN_Lihat
             // 
-            this.BTN_Lihat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.BTN_Lihat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Lihat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Lihat.Location = new System.Drawing.Point(134, 491);
@@ -137,7 +135,7 @@
             this.Controls.Add(this.DGV_ListLog);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LBL_Title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_LogNasabah";
             this.Size = new System.Drawing.Size(773, 536);
             this.Load += new System.EventHandler(this.UC_LogNasabah_Load);

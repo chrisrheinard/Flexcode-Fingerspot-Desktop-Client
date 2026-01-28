@@ -131,7 +131,6 @@
             // 
             // BTN_Refresh
             // 
-            this.BTN_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Refresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Refresh.Location = new System.Drawing.Point(260, 490);

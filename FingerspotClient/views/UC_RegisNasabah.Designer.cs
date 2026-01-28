@@ -50,8 +50,9 @@
             this.LBL_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.LBL_Title.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Title.Location = new System.Drawing.Point(0, 0);
+            this.LBL_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Title.Name = "LBL_Title";
-            this.LBL_Title.Size = new System.Drawing.Size(307, 37);
+            this.LBL_Title.Size = new System.Drawing.Size(385, 46);
             this.LBL_Title.TabIndex = 3;
             this.LBL_Title.Text = "REGISTRASI NASABAH";
             // 
@@ -63,9 +64,11 @@
             this.groupBox1.Controls.Add(this.LBL_NamaNasabah);
             this.groupBox1.Controls.Add(this.BTN_TambahNasabah);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 12);
+            this.groupBox1.Location = new System.Drawing.Point(24, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 201);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(363, 247);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA NASABAH";
@@ -74,18 +77,20 @@
             // 
             this.TXT_IdNasabah.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_IdNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TXT_IdNasabah.Location = new System.Drawing.Point(9, 54);
+            this.TXT_IdNasabah.Location = new System.Drawing.Point(12, 66);
+            this.TXT_IdNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_IdNasabah.Name = "TXT_IdNasabah";
-            this.TXT_IdNasabah.Size = new System.Drawing.Size(245, 21);
+            this.TXT_IdNasabah.Size = new System.Drawing.Size(326, 24);
             this.TXT_IdNasabah.TabIndex = 4;
             // 
             // LBL_IdNasabah
             // 
             this.LBL_IdNasabah.AutoSize = true;
             this.LBL_IdNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_IdNasabah.Location = new System.Drawing.Point(6, 36);
+            this.LBL_IdNasabah.Location = new System.Drawing.Point(8, 44);
+            this.LBL_IdNasabah.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_IdNasabah.Name = "LBL_IdNasabah";
-            this.LBL_IdNasabah.Size = new System.Drawing.Size(69, 15);
+            this.LBL_IdNasabah.Size = new System.Drawing.Size(90, 20);
             this.LBL_IdNasabah.TabIndex = 3;
             this.LBL_IdNasabah.Text = "ID Nasabah";
             // 
@@ -93,18 +98,20 @@
             // 
             this.TXT_NamaNasabah.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_NamaNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TXT_NamaNasabah.Location = new System.Drawing.Point(9, 114);
+            this.TXT_NamaNasabah.Location = new System.Drawing.Point(12, 140);
+            this.TXT_NamaNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXT_NamaNasabah.Name = "TXT_NamaNasabah";
-            this.TXT_NamaNasabah.Size = new System.Drawing.Size(245, 21);
+            this.TXT_NamaNasabah.Size = new System.Drawing.Size(326, 24);
             this.TXT_NamaNasabah.TabIndex = 1;
             // 
             // LBL_NamaNasabah
             // 
             this.LBL_NamaNasabah.AutoSize = true;
             this.LBL_NamaNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_NamaNasabah.Location = new System.Drawing.Point(6, 96);
+            this.LBL_NamaNasabah.Location = new System.Drawing.Point(8, 118);
+            this.LBL_NamaNasabah.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_NamaNasabah.Name = "LBL_NamaNasabah";
-            this.LBL_NamaNasabah.Size = new System.Drawing.Size(88, 15);
+            this.LBL_NamaNasabah.Size = new System.Drawing.Size(116, 20);
             this.LBL_NamaNasabah.TabIndex = 0;
             this.LBL_NamaNasabah.Text = "Nama Nasabah";
             // 
@@ -112,9 +119,10 @@
             // 
             this.BTN_TambahNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_TambahNasabah.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_TambahNasabah.Location = new System.Drawing.Point(171, 159);
+            this.BTN_TambahNasabah.Location = new System.Drawing.Point(228, 196);
+            this.BTN_TambahNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_TambahNasabah.Name = "BTN_TambahNasabah";
-            this.BTN_TambahNasabah.Size = new System.Drawing.Size(83, 30);
+            this.BTN_TambahNasabah.Size = new System.Drawing.Size(111, 37);
             this.BTN_TambahNasabah.TabIndex = 2;
             this.BTN_TambahNasabah.Text = "Register";
             this.BTN_TambahNasabah.UseVisualStyleBackColor = true;
@@ -123,9 +131,11 @@
             // 
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(296, 12);
+            this.groupBox2.Location = new System.Drawing.Point(395, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(268, 370);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(357, 455);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SIDIK JARI";
@@ -133,9 +143,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 315);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -144,20 +155,22 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 37);
+            this.panel1.Location = new System.Drawing.Point(0, 46);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(580, 397);
+            this.panel1.Size = new System.Drawing.Size(773, 489);
             this.panel1.TabIndex = 4;
             // 
             // UC_RegisNasabah
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LBL_Title);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_RegisNasabah";
-            this.Size = new System.Drawing.Size(580, 451);
+            this.Size = new System.Drawing.Size(773, 555);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

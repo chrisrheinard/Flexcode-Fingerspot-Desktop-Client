@@ -32,8 +32,8 @@
             this.DGV_DeviceList = new System.Windows.Forms.DataGridView();
             this.BTN_Hapus = new System.Windows.Forms.Button();
             this.PanelTombol = new System.Windows.Forms.Panel();
-            this.BTN_Tambah = new System.Windows.Forms.Button();
             this.BTN_Refresh = new System.Windows.Forms.Button();
+            this.BTN_Tambah = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_DeviceList)).BeginInit();
             this.PanelTombol.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,19 @@
             this.PanelTombol.Size = new System.Drawing.Size(773, 50);
             this.PanelTombol.TabIndex = 11;
             // 
+            // BTN_Refresh
+            // 
+            this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Refresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Refresh.Location = new System.Drawing.Point(260, 7);
+            this.BTN_Refresh.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Refresh.Name = "BTN_Refresh";
+            this.BTN_Refresh.Size = new System.Drawing.Size(117, 37);
+            this.BTN_Refresh.TabIndex = 12;
+            this.BTN_Refresh.Text = "Refresh";
+            this.BTN_Refresh.UseVisualStyleBackColor = true;
+            this.BTN_Refresh.Click += new System.EventHandler(this.BTN_Refresh_Click);
+            // 
             // BTN_Tambah
             // 
             this.BTN_Tambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,20 +117,6 @@
             this.BTN_Tambah.Text = "Tambah";
             this.BTN_Tambah.UseVisualStyleBackColor = true;
             this.BTN_Tambah.Click += new System.EventHandler(this.BTN_Tambah_Click);
-            // 
-            // BTN_Refresh
-            // 
-            this.BTN_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Refresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Refresh.Location = new System.Drawing.Point(260, 7);
-            this.BTN_Refresh.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Refresh.Name = "BTN_Refresh";
-            this.BTN_Refresh.Size = new System.Drawing.Size(117, 37);
-            this.BTN_Refresh.TabIndex = 12;
-            this.BTN_Refresh.Text = "Refresh";
-            this.BTN_Refresh.UseVisualStyleBackColor = true;
-            this.BTN_Refresh.Click += new System.EventHandler(this.BTN_Refresh_Click);
             // 
             // UC_ListAlat
             // 
