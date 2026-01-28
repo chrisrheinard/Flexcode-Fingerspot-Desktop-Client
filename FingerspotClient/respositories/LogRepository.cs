@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,6 +69,66 @@ namespace FingerspotClient.respositories
                     return result as byte[];
                 }
             }
+        }
+
+        // --- SEARCH ---
+        public List<VerificationLog> Search(string keyword, DateTime? startDate = null, DateTime? endDate = null)
+        {
+            var list = new List<VerificationLog>();
+            using (var conn = _dbService.GetConnection())
+            {
+                conn.Open();
+
+                // Perhatikan bagian d.name AS device_name <--- INI KUNCINYA
+                string sql = @"
+            SELECT 
+                l.id, 
+                c.name AS customer_name, 
+                CONCAT(u.username, ' (', u.role, ')') AS teller_name,
+                d.name AS device_name, 
+                l.pc_name, 
+                l.verified_at
+            FROM verification_logs l
+            LEFT JOIN customers c ON l.customer_id = c.id
+            LEFT JOIN users u ON l.user_id = u.id
+            LEFT JOIN devices d ON l.device_id = d.id
+            WHERE (c.name LIKE @key OR u.username LIKE @key OR l.pc_name LIKE @key)";
+
+                if (startDate.HasValue && endDate.HasValue)
+                {
+                    sql += " AND l.verified_at BETWEEN @start AND @end";
+                }
+
+                sql += " ORDER BY l.verified_at DESC";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@key", "%" + keyword + "%");
+                    if (startDate.HasValue && endDate.HasValue)
+                    {
+                        cmd.Parameters.AddWithValue("@start", startDate.Value.Date);
+                        cmd.Parameters.AddWithValue("@end", endDate.Value.Date.AddDays(1).AddSeconds(-1));
+                    }
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new VerificationLog
+                            {
+                                Id = reader.GetInt32("id"),
+                                // Kita pakai nama Alias yang ada di SQL tadi
+                                CustomerName = reader.IsDBNull(reader.GetOrdinal("customer_name")) ? "N/A" : reader.GetString("customer_name"),
+                                TellerName = reader.IsDBNull(reader.GetOrdinal("teller_name")) ? "N/A" : reader.GetString("teller_name"),
+                                DeviceName = reader.IsDBNull(reader.GetOrdinal("device_name")) ? "Unknown Alat" : reader.GetString("device_name"),
+                                PcName = reader.IsDBNull(reader.GetOrdinal("pc_name")) ? "Unknown PC" : reader.GetString("pc_name"),
+                                VerifiedAt = reader.GetDateTime("verified_at")
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
         }
     }
 }

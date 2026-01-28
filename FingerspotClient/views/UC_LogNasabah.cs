@@ -25,20 +25,26 @@ namespace FingerspotClient
             try
             {
                 var repo = new LogRepository();
-                DGV_ListLog.DataSource = null;
-                DGV_ListLog.DataSource = repo.GetAll();
 
-                // Atur Tampilan
+                // Ambil nilai dari input UI
+                string keyword = TXT_Search.Text.Trim();
+                DateTime start = DTP_Start.Value;
+                DateTime end = DTP_End.Value;
+
+                // Ganti repo.GetAll() dengan repo.Search()
+                // Jika keyword kosong, Search otomatis akan ambil semua data di range tanggal tersebut
+                DGV_ListLog.DataSource = null;
+                DGV_ListLog.DataSource = repo.Search(keyword, start, end);
+
+                // --- Bagian Atur Tampilan (Tetap Sama Seperti Punya Kamu) ---
                 DGV_ListLog.Columns["Id"].Visible = false;
-                DGV_ListLog.Columns["EvidenceImage"].Visible = false; // Foto jangan di grid (berat)
+                DGV_ListLog.Columns["EvidenceImage"].Visible = false;
 
                 DGV_ListLog.Columns["CustomerName"].HeaderText = "Nasabah";
                 DGV_ListLog.Columns["TellerName"].HeaderText = "Petugas/Teller";
                 DGV_ListLog.Columns["DeviceName"].HeaderText = "Alat";
                 DGV_ListLog.Columns["PcName"].HeaderText = "Nama PC";
                 DGV_ListLog.Columns["VerifiedAt"].HeaderText = "Waktu Verifikasi";
-
-                // Format Tanggal agar enak dibaca (Jam:Menit:Detik)
                 DGV_ListLog.Columns["VerifiedAt"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
 
                 DGV_ListLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -51,6 +57,15 @@ namespace FingerspotClient
 
         private void UC_LogNasabah_Load(object sender, EventArgs e)
         {
+            // dtpStart diatur ke jam 00:00:00 hari ini
+            //DTP_Start.Value = DateTime.Now.Date;
+
+            // Start diatur ke 7 hari yang lalu jam 00:00
+            DTP_Start.Value = DateTime.Now.Date.AddDays(-7);
+
+            // dtpEnd diatur ke jam 23:59:59 hari ini
+            DTP_End.Value = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+
             LoadLogData();
         }
 
@@ -80,6 +95,20 @@ namespace FingerspotClient
                     MessageBox.Show("Gambar tidak tersedia.");
                 }
             }
+        }
+
+        private void TXT_Search_TextChanged(object sender, EventArgs e)
+        {
+            // Hanya cari kalau sudah ngetik lebih dari 2 karakter
+            if (TXT_Search.Text.Length > 1 || TXT_Search.Text.Length == 0)
+            {
+                LoadLogData();
+            }
+        }
+
+        private void BTN_Cari_Click(object sender, EventArgs e)
+        {
+            LoadLogData();
         }
     }
 }

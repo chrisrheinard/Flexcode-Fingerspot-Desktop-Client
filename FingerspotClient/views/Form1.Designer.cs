@@ -49,6 +49,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LBL_StatusServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerKoneksi = new System.Windows.Forms.Timer(this.components);
+            this.BTN_Keluar = new System.Windows.Forms.Button();
             this.PanelSidebar.SuspendLayout();
             this.PanelSidebarFooter.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -60,6 +61,7 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.PanelSidebar.Controls.Add(this.BTN_Keluar);
             this.PanelSidebar.Controls.Add(this.PanelSidebarFooter);
             this.PanelSidebar.Controls.Add(this.BTN_ListAlat);
             this.PanelSidebar.Controls.Add(this.BTN_LogNasabah);
@@ -313,6 +315,22 @@
             this.timerKoneksi.Interval = 5000;
             this.timerKoneksi.Tick += new System.EventHandler(this.timerKoneksi_Tick);
             // 
+            // BTN_Keluar
+            // 
+            this.BTN_Keluar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTN_Keluar.FlatAppearance.BorderSize = 0;
+            this.BTN_Keluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Keluar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Keluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.BTN_Keluar.Location = new System.Drawing.Point(0, 285);
+            this.BTN_Keluar.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Keluar.Name = "BTN_Keluar";
+            this.BTN_Keluar.Size = new System.Drawing.Size(328, 57);
+            this.BTN_Keluar.TabIndex = 6;
+            this.BTN_Keluar.Text = "Keluar";
+            this.BTN_Keluar.UseVisualStyleBackColor = true;
+            this.BTN_Keluar.Click += new System.EventHandler(this.BTN_Keluar_Click);
+            // 
             // FingerspotClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,6 +380,7 @@
         private System.Windows.Forms.ToolStripStatusLabel LBL_StatusServer;
         private System.Windows.Forms.Timer timerKoneksi;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Button BTN_Keluar;
     }
 }
 

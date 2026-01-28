@@ -202,5 +202,22 @@ namespace FingerspotClient
                 }));
             });
         }
+
+        private void BTN_Keluar_Click(object sender, EventArgs e)
+        {
+            // Munculkan jendela konfirmasi (Modal)
+            DialogResult result = MessageBox.Show(
+                "Apakah Anda yakin ingin keluar dari aplikasi?",
+                "Konfirmasi Keluar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // Jika user klik 'Yes', maka tutup aplikasinya
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
