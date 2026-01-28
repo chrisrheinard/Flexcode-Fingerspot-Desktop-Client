@@ -26,5 +26,10 @@ namespace FingerspotClient
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void BTN_Tambah_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -101,6 +101,7 @@
     <Compile Include="models\VerificationLog.cs" />
     <Compile Include="models\Customer.cs" />
     <Compile Include="models\User.cs" />
+    <Compile Include="respositories\CustomerRepository.cs" />
     <Compile Include="services\AuthService.cs" />
     <Compile Include="services\DatabaseService.cs" />
     <Compile Include="views\Form1.cs">
@@ -122,6 +123,12 @@
     </Compile>
     <Compile Include="views\TambahAlat.Designer.cs">
       <DependentUpon>TambahAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UbahNasabah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UbahNasabah.Designer.cs">
+      <DependentUpon>UbahNasabah.cs</DependentUpon>
     </Compile>
     <Compile Include="views\UC_ListAlat.cs">
       <SubType>UserControl</SubType>
@@ -171,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="views\TambahAlat.resx">
       <DependentUpon>TambahAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UbahNasabah.resx">
+      <DependentUpon>UbahNasabah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\UC_ListAlat.resx">
       <DependentUpon>UC_ListAlat.cs</DependentUpon>

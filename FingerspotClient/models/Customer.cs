@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace FingerspotClient.models
 {
-    internal class Customer
+    public class Customer
     {
         public int Id { get; set; }
         public string CbsId { get; set; } // Core Banking System ID

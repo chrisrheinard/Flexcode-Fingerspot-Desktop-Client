@@ -43,8 +43,9 @@
             this.LBL_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.LBL_Title.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Title.Location = new System.Drawing.Point(0, 0);
+            this.LBL_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Title.Name = "LBL_Title";
-            this.LBL_Title.Size = new System.Drawing.Size(420, 37);
+            this.LBL_Title.Size = new System.Drawing.Size(524, 46);
             this.LBL_Title.TabIndex = 6;
             this.LBL_Title.Text = "LIST ALAT PEREKAM SIDIK JARI";
             // 
@@ -55,12 +56,14 @@
             this.DGV_ListAlat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGV_ListAlat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ListAlat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DGV_ListAlat.Location = new System.Drawing.Point(0, 37);
+            this.DGV_ListAlat.Location = new System.Drawing.Point(0, 46);
+            this.DGV_ListAlat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV_ListAlat.Name = "DGV_ListAlat";
             this.DGV_ListAlat.ReadOnly = true;
             this.DGV_ListAlat.RowHeadersVisible = false;
+            this.DGV_ListAlat.RowHeadersWidth = 51;
             this.DGV_ListAlat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ListAlat.Size = new System.Drawing.Size(580, 324);
+            this.DGV_ListAlat.Size = new System.Drawing.Size(773, 399);
             this.DGV_ListAlat.TabIndex = 7;
             // 
             // BTN_Hapus
@@ -68,9 +71,10 @@
             this.BTN_Hapus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.BTN_Hapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Hapus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Hapus.Location = new System.Drawing.Point(101, 6);
+            this.BTN_Hapus.Location = new System.Drawing.Point(135, 7);
+            this.BTN_Hapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Hapus.Name = "BTN_Hapus";
-            this.BTN_Hapus.Size = new System.Drawing.Size(88, 30);
+            this.BTN_Hapus.Size = new System.Drawing.Size(117, 37);
             this.BTN_Hapus.TabIndex = 10;
             this.BTN_Hapus.Text = "Hapus";
             this.BTN_Hapus.UseVisualStyleBackColor = true;
@@ -80,18 +84,20 @@
             this.PanelTombol.Controls.Add(this.BTN_Hapus);
             this.PanelTombol.Controls.Add(this.BTN_Tambah);
             this.PanelTombol.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTombol.Location = new System.Drawing.Point(0, 361);
+            this.PanelTombol.Location = new System.Drawing.Point(0, 445);
+            this.PanelTombol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelTombol.Name = "PanelTombol";
-            this.PanelTombol.Size = new System.Drawing.Size(580, 41);
+            this.PanelTombol.Size = new System.Drawing.Size(773, 50);
             this.PanelTombol.TabIndex = 11;
             // 
             // BTN_Tambah
             // 
             this.BTN_Tambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Tambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Tambah.Location = new System.Drawing.Point(7, 6);
+            this.BTN_Tambah.Location = new System.Drawing.Point(9, 7);
+            this.BTN_Tambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Tambah.Name = "BTN_Tambah";
-            this.BTN_Tambah.Size = new System.Drawing.Size(88, 30);
+            this.BTN_Tambah.Size = new System.Drawing.Size(117, 37);
             this.BTN_Tambah.TabIndex = 9;
             this.BTN_Tambah.Text = "Tambah";
             this.BTN_Tambah.UseVisualStyleBackColor = true;
@@ -99,13 +105,14 @@
             // 
             // UC_ListAlat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelTombol);
             this.Controls.Add(this.DGV_ListAlat);
             this.Controls.Add(this.LBL_Title);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_ListAlat";
-            this.Size = new System.Drawing.Size(580, 407);
+            this.Size = new System.Drawing.Size(773, 501);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ListAlat)).EndInit();
             this.PanelTombol.ResumeLayout(false);
             this.ResumeLayout(false);

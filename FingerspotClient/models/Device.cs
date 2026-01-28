@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FingerspotClient.models
 {
-    internal class Device
+    public class Device
     {
         public int Id { get; set; }
         public string Name { get; set; } 

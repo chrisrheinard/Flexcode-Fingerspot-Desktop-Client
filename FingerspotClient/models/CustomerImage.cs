@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FingerspotClient.models
 {
-    internal class CustomerImage
+    public class CustomerImage
     {
         public int Id { get; set; }
         public string CustomerId { get; set; }
