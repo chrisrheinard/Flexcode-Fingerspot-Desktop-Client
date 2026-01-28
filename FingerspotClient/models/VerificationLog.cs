@@ -9,9 +9,11 @@ namespace FingerspotClient.models
     public class VerificationLog
     {
         public int Id { get; set; }
-        public string NasabahId { get; set; }
-        public DateTime Waktu { get; set; }
+        public string CustomerName { get; set; }
+        public string TellerName { get; set; }
+        public string DeviceName { get; set; }
+        public string PcName { get; set; }
+        public DateTime VerifiedAt { get; set; }
         public byte[] EvidenceImage { get; set; }
-        public string DeviceId { get; set; }
     }
 }

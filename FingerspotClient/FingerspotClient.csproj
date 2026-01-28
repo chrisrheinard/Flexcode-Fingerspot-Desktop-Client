@@ -102,6 +102,8 @@
     <Compile Include="models\Customer.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="respositories\CustomerRepository.cs" />
+    <Compile Include="respositories\DeviceRepository.cs" />
+    <Compile Include="respositories\LogRepository.cs" />
     <Compile Include="services\AuthService.cs" />
     <Compile Include="services\DatabaseService.cs" />
     <Compile Include="views\Form1.cs">
@@ -118,6 +120,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\FormPreviewBukti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormPreviewBukti.Designer.cs">
+      <DependentUpon>FormPreviewBukti.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\TambahAlat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +184,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="views\FormPreviewBukti.resx">
+      <DependentUpon>FormPreviewBukti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\TambahAlat.resx">
       <DependentUpon>TambahAlat.cs</DependentUpon>
     </EmbeddedResource>

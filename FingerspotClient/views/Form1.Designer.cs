@@ -46,9 +46,9 @@
             this.ButtonMax = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.PanelMain = new System.Windows.Forms.Panel();
-            this.timerKoneksi = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LBL_StatusServer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerKoneksi = new System.Windows.Forms.Timer(this.components);
             this.PanelSidebar.SuspendLayout();
             this.PanelSidebarFooter.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -67,9 +67,10 @@
             this.PanelSidebar.Controls.Add(this.BTN_ListNasabah);
             this.PanelSidebar.Controls.Add(this.BTN_RegisNasabah);
             this.PanelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelSidebar.Location = new System.Drawing.Point(0, 39);
+            this.PanelSidebar.Location = new System.Drawing.Point(0, 48);
+            this.PanelSidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelSidebar.Name = "PanelSidebar";
-            this.PanelSidebar.Size = new System.Drawing.Size(246, 561);
+            this.PanelSidebar.Size = new System.Drawing.Size(328, 690);
             this.PanelSidebar.TabIndex = 0;
             // 
             // PanelSidebarFooter
@@ -77,9 +78,10 @@
             this.PanelSidebarFooter.Controls.Add(this.LBL_Copyright);
             this.PanelSidebarFooter.Controls.Add(this.LBL_Version);
             this.PanelSidebarFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelSidebarFooter.Location = new System.Drawing.Point(0, 497);
+            this.PanelSidebarFooter.Location = new System.Drawing.Point(0, 611);
+            this.PanelSidebarFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelSidebarFooter.Name = "PanelSidebarFooter";
-            this.PanelSidebarFooter.Size = new System.Drawing.Size(246, 64);
+            this.PanelSidebarFooter.Size = new System.Drawing.Size(328, 79);
             this.PanelSidebarFooter.TabIndex = 5;
             // 
             // LBL_Copyright
@@ -87,9 +89,10 @@
             this.LBL_Copyright.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LBL_Copyright.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Copyright.ForeColor = System.Drawing.Color.Silver;
-            this.LBL_Copyright.Location = new System.Drawing.Point(0, 28);
+            this.LBL_Copyright.Location = new System.Drawing.Point(0, 34);
+            this.LBL_Copyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Copyright.Name = "LBL_Copyright";
-            this.LBL_Copyright.Size = new System.Drawing.Size(246, 36);
+            this.LBL_Copyright.Size = new System.Drawing.Size(328, 45);
             this.LBL_Copyright.TabIndex = 7;
             this.LBL_Copyright.Text = "© 2026 Christian Rheinard Sadeko\r\nAll rights reserved.";
             this.LBL_Copyright.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,8 +103,9 @@
             this.LBL_Version.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Version.ForeColor = System.Drawing.Color.Silver;
             this.LBL_Version.Location = new System.Drawing.Point(0, 0);
+            this.LBL_Version.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_Version.Name = "LBL_Version";
-            this.LBL_Version.Size = new System.Drawing.Size(246, 28);
+            this.LBL_Version.Size = new System.Drawing.Size(328, 34);
             this.LBL_Version.TabIndex = 6;
             this.LBL_Version.Text = "v1.0.0 (25 Jan 2026)";
             this.LBL_Version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,11 +117,12 @@
             this.BTN_ListAlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_ListAlat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_ListAlat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.BTN_ListAlat.Location = new System.Drawing.Point(0, 184);
+            this.BTN_ListAlat.Location = new System.Drawing.Point(0, 228);
+            this.BTN_ListAlat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_ListAlat.Name = "BTN_ListAlat";
-            this.BTN_ListAlat.Size = new System.Drawing.Size(246, 46);
+            this.BTN_ListAlat.Size = new System.Drawing.Size(328, 57);
             this.BTN_ListAlat.TabIndex = 4;
-            this.BTN_ListAlat.Text = "Alat Sidik Jari";
+            this.BTN_ListAlat.Text = "List Device";
             this.BTN_ListAlat.UseVisualStyleBackColor = true;
             this.BTN_ListAlat.Click += new System.EventHandler(this.BTN_ListAlat_Click);
             // 
@@ -128,9 +133,10 @@
             this.BTN_LogNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_LogNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_LogNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.BTN_LogNasabah.Location = new System.Drawing.Point(0, 138);
+            this.BTN_LogNasabah.Location = new System.Drawing.Point(0, 171);
+            this.BTN_LogNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_LogNasabah.Name = "BTN_LogNasabah";
-            this.BTN_LogNasabah.Size = new System.Drawing.Size(246, 46);
+            this.BTN_LogNasabah.Size = new System.Drawing.Size(328, 57);
             this.BTN_LogNasabah.TabIndex = 3;
             this.BTN_LogNasabah.Text = "Log Nasabah";
             this.BTN_LogNasabah.UseVisualStyleBackColor = true;
@@ -143,9 +149,10 @@
             this.BTN_VerifNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_VerifNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_VerifNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.BTN_VerifNasabah.Location = new System.Drawing.Point(0, 92);
+            this.BTN_VerifNasabah.Location = new System.Drawing.Point(0, 114);
+            this.BTN_VerifNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_VerifNasabah.Name = "BTN_VerifNasabah";
-            this.BTN_VerifNasabah.Size = new System.Drawing.Size(246, 46);
+            this.BTN_VerifNasabah.Size = new System.Drawing.Size(328, 57);
             this.BTN_VerifNasabah.TabIndex = 2;
             this.BTN_VerifNasabah.Text = "Verifikasi Nasabah";
             this.BTN_VerifNasabah.UseVisualStyleBackColor = true;
@@ -158,9 +165,10 @@
             this.BTN_ListNasabah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_ListNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_ListNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.BTN_ListNasabah.Location = new System.Drawing.Point(0, 46);
+            this.BTN_ListNasabah.Location = new System.Drawing.Point(0, 57);
+            this.BTN_ListNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_ListNasabah.Name = "BTN_ListNasabah";
-            this.BTN_ListNasabah.Size = new System.Drawing.Size(246, 46);
+            this.BTN_ListNasabah.Size = new System.Drawing.Size(328, 57);
             this.BTN_ListNasabah.TabIndex = 1;
             this.BTN_ListNasabah.Text = "List Nasabah";
             this.BTN_ListNasabah.UseVisualStyleBackColor = true;
@@ -174,8 +182,9 @@
             this.BTN_RegisNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_RegisNasabah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.BTN_RegisNasabah.Location = new System.Drawing.Point(0, 0);
+            this.BTN_RegisNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_RegisNasabah.Name = "BTN_RegisNasabah";
-            this.BTN_RegisNasabah.Size = new System.Drawing.Size(246, 46);
+            this.BTN_RegisNasabah.Size = new System.Drawing.Size(328, 57);
             this.BTN_RegisNasabah.TabIndex = 0;
             this.BTN_RegisNasabah.Text = "Registrasi Nasabah";
             this.BTN_RegisNasabah.UseVisualStyleBackColor = true;
@@ -191,8 +200,9 @@
             this.PanelHeader.Controls.Add(this.ButtonExit);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1200, 39);
+            this.PanelHeader.Size = new System.Drawing.Size(1600, 48);
             this.PanelHeader.TabIndex = 1;
             this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
             // 
@@ -201,9 +211,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(39, 0);
+            this.label1.Location = new System.Drawing.Point(52, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 39);
+            this.label1.Size = new System.Drawing.Size(327, 48);
             this.label1.TabIndex = 4;
             this.label1.Text = "Fingerspot Client";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,8 +225,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::FingerspotClient.Properties.Resources.icon_64x64;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -227,9 +239,10 @@
             this.ButtonMin.FlatAppearance.BorderSize = 0;
             this.ButtonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.ButtonMin.Location = new System.Drawing.Point(1062, 0);
+            this.ButtonMin.Location = new System.Drawing.Point(1417, 0);
+            this.ButtonMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonMin.Name = "ButtonMin";
-            this.ButtonMin.Size = new System.Drawing.Size(46, 39);
+            this.ButtonMin.Size = new System.Drawing.Size(61, 48);
             this.ButtonMin.TabIndex = 2;
             this.ButtonMin.Text = "➖";
             this.ButtonMin.UseVisualStyleBackColor = true;
@@ -241,9 +254,10 @@
             this.ButtonMax.FlatAppearance.BorderSize = 0;
             this.ButtonMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.ButtonMax.Location = new System.Drawing.Point(1108, 0);
+            this.ButtonMax.Location = new System.Drawing.Point(1478, 0);
+            this.ButtonMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonMax.Name = "ButtonMax";
-            this.ButtonMax.Size = new System.Drawing.Size(46, 39);
+            this.ButtonMax.Size = new System.Drawing.Size(61, 48);
             this.ButtonMax.TabIndex = 1;
             this.ButtonMax.Text = "▢";
             this.ButtonMax.UseVisualStyleBackColor = true;
@@ -256,9 +270,10 @@
             this.ButtonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.ButtonExit.Location = new System.Drawing.Point(1154, 0);
+            this.ButtonExit.Location = new System.Drawing.Point(1539, 0);
+            this.ButtonExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Size = new System.Drawing.Size(46, 39);
+            this.ButtonExit.Size = new System.Drawing.Size(61, 48);
             this.ButtonExit.TabIndex = 0;
             this.ButtonExit.Text = "🗙";
             this.ButtonExit.UseVisualStyleBackColor = true;
@@ -269,43 +284,47 @@
             this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.PanelMain.Controls.Add(this.statusStrip1);
             this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelMain.Location = new System.Drawing.Point(246, 39);
+            this.PanelMain.Location = new System.Drawing.Point(328, 48);
+            this.PanelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelMain.Name = "PanelMain";
-            this.PanelMain.Size = new System.Drawing.Size(954, 561);
+            this.PanelMain.Size = new System.Drawing.Size(1272, 690);
             this.PanelMain.TabIndex = 2;
-            // 
-            // timerKoneksi
-            // 
-            this.timerKoneksi.Interval = 5000;
-            this.timerKoneksi.Tick += new System.EventHandler(this.timerKoneksi_Tick);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LBL_StatusServer});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 664);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(954, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1272, 26);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // LBL_StatusServer
             // 
             this.LBL_StatusServer.Name = "LBL_StatusServer";
-            this.LBL_StatusServer.Size = new System.Drawing.Size(42, 17);
+            this.LBL_StatusServer.Size = new System.Drawing.Size(53, 20);
             this.LBL_StatusServer.Text = "Server:";
+            // 
+            // timerKoneksi
+            // 
+            this.timerKoneksi.Interval = 5000;
+            this.timerKoneksi.Tick += new System.EventHandler(this.timerKoneksi_Tick);
             // 
             // FingerspotClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.ClientSize = new System.Drawing.Size(1600, 738);
             this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.PanelSidebar);
             this.Controls.Add(this.PanelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FingerspotClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FingerspotClient";
