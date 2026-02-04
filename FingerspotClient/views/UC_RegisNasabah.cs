@@ -25,6 +25,7 @@ namespace FingerspotClient
         private string _secretKey = "BPRCakhra2026"; // Harus sama saat Verifikasi!
         private string _baseFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fp_samples");
         string fileName = "";
+        private Customer _newCustomer;
 
         public UC_RegisNasabah()
         {
@@ -113,6 +114,11 @@ namespace FingerspotClient
             TXT_NamaNasabah.Enabled = true;
             BTN_TambahNasabah.Enabled = true;
             BTN_Cancel.Enabled = false;
+        }
+
+        private void CreateNewRecord(string id, string name)
+        {
+
         }
     }
 }

@@ -33,14 +33,14 @@
             this.LBL_Status = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.BTN_Verifikasi = new System.Windows.Forms.Button();
             this.TXT_WaktuVerif = new System.Windows.Forms.TextBox();
             this.LBL_WaktuVerif = new System.Windows.Forms.Label();
             this.TXT_IdNasabah = new System.Windows.Forms.TextBox();
             this.LBL_IdNasabah = new System.Windows.Forms.Label();
             this.TXT_NamaNasabah = new System.Windows.Forms.TextBox();
             this.LBL_NamaNasabah = new System.Windows.Forms.Label();
-            this.BTN_Verifikasi = new System.Windows.Forms.Button();
-            this.BTN_Cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -111,6 +111,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA TERDETEKSI";
             // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.Enabled = false;
+            this.BTN_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Cancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Cancel.Location = new System.Drawing.Point(12, 268);
+            this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(326, 37);
+            this.BTN_Cancel.TabIndex = 7;
+            this.BTN_Cancel.Text = "Cancel";
+            this.BTN_Cancel.UseVisualStyleBackColor = true;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
+            // 
+            // BTN_Verifikasi
+            // 
+            this.BTN_Verifikasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Verifikasi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Verifikasi.Location = new System.Drawing.Point(12, 223);
+            this.BTN_Verifikasi.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Verifikasi.Name = "BTN_Verifikasi";
+            this.BTN_Verifikasi.Size = new System.Drawing.Size(326, 37);
+            this.BTN_Verifikasi.TabIndex = 6;
+            this.BTN_Verifikasi.Text = "Verifikasi";
+            this.BTN_Verifikasi.UseVisualStyleBackColor = true;
+            this.BTN_Verifikasi.Click += new System.EventHandler(this.BTN_Verifikasi_Click);
+            // 
             // TXT_WaktuVerif
             // 
             this.TXT_WaktuVerif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -178,33 +205,6 @@
             this.LBL_NamaNasabah.Size = new System.Drawing.Size(116, 20);
             this.LBL_NamaNasabah.TabIndex = 0;
             this.LBL_NamaNasabah.Text = "Nama Nasabah";
-            // 
-            // BTN_Verifikasi
-            // 
-            this.BTN_Verifikasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Verifikasi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Verifikasi.Location = new System.Drawing.Point(12, 223);
-            this.BTN_Verifikasi.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Verifikasi.Name = "BTN_Verifikasi";
-            this.BTN_Verifikasi.Size = new System.Drawing.Size(326, 37);
-            this.BTN_Verifikasi.TabIndex = 6;
-            this.BTN_Verifikasi.Text = "Verifikasi";
-            this.BTN_Verifikasi.UseVisualStyleBackColor = true;
-            this.BTN_Verifikasi.Click += new System.EventHandler(this.BTN_Verifikasi_Click);
-            // 
-            // BTN_Cancel
-            // 
-            this.BTN_Cancel.Enabled = false;
-            this.BTN_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Cancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Cancel.Location = new System.Drawing.Point(12, 268);
-            this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Cancel.Name = "BTN_Cancel";
-            this.BTN_Cancel.Size = new System.Drawing.Size(326, 37);
-            this.BTN_Cancel.TabIndex = 7;
-            this.BTN_Cancel.Text = "Cancel";
-            this.BTN_Cancel.UseVisualStyleBackColor = true;
-            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // UC_VerifNasabah
             // 
