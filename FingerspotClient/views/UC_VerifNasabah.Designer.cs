@@ -30,7 +30,7 @@
         {
             this.LBL_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_Status = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TXT_WaktuVerif = new System.Windows.Forms.TextBox();
@@ -39,6 +39,8 @@
             this.LBL_IdNasabah = new System.Windows.Forms.Label();
             this.TXT_NamaNasabah = new System.Windows.Forms.TextBox();
             this.LBL_NamaNasabah = new System.Windows.Forms.Label();
+            this.BTN_Verifikasi = new System.Windows.Forms.Button();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -58,32 +60,32 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LBL_Status);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 46);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 357);
             this.panel1.TabIndex = 5;
             // 
-            // label1
+            // LBL_Status
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 322);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Silakan Tempelkan Jari...";
+            this.LBL_Status.AutoSize = true;
+            this.LBL_Status.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Status.Location = new System.Drawing.Point(159, 323);
+            this.LBL_Status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Status.Name = "LBL_Status";
+            this.LBL_Status.Size = new System.Drawing.Size(34, 20);
+            this.LBL_Status.TabIndex = 7;
+            this.LBL_Status.Text = "Idle";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(9, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(341, 315);
             this.pictureBox1.TabIndex = 5;
@@ -91,6 +93,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BTN_Cancel);
+            this.groupBox1.Controls.Add(this.BTN_Verifikasi);
             this.groupBox1.Controls.Add(this.TXT_WaktuVerif);
             this.groupBox1.Controls.Add(this.LBL_WaktuVerif);
             this.groupBox1.Controls.Add(this.TXT_IdNasabah);
@@ -99,10 +103,10 @@
             this.groupBox1.Controls.Add(this.LBL_NamaNasabah);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(359, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(363, 276);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(363, 315);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA TERDETEKSI";
@@ -112,8 +116,8 @@
             this.TXT_WaktuVerif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_WaktuVerif.Enabled = false;
             this.TXT_WaktuVerif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TXT_WaktuVerif.Location = new System.Drawing.Point(12, 218);
-            this.TXT_WaktuVerif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_WaktuVerif.Location = new System.Drawing.Point(12, 166);
+            this.TXT_WaktuVerif.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_WaktuVerif.Name = "TXT_WaktuVerif";
             this.TXT_WaktuVerif.Size = new System.Drawing.Size(326, 24);
             this.TXT_WaktuVerif.TabIndex = 6;
@@ -123,7 +127,7 @@
             // 
             this.LBL_WaktuVerif.AutoSize = true;
             this.LBL_WaktuVerif.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_WaktuVerif.Location = new System.Drawing.Point(8, 196);
+            this.LBL_WaktuVerif.Location = new System.Drawing.Point(8, 144);
             this.LBL_WaktuVerif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_WaktuVerif.Name = "LBL_WaktuVerif";
             this.LBL_WaktuVerif.Size = new System.Drawing.Size(122, 20);
@@ -137,7 +141,7 @@
             this.TXT_IdNasabah.Enabled = false;
             this.TXT_IdNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.TXT_IdNasabah.Location = new System.Drawing.Point(12, 66);
-            this.TXT_IdNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_IdNasabah.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_IdNasabah.Name = "TXT_IdNasabah";
             this.TXT_IdNasabah.Size = new System.Drawing.Size(326, 24);
             this.TXT_IdNasabah.TabIndex = 4;
@@ -158,8 +162,8 @@
             this.TXT_NamaNasabah.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_NamaNasabah.Enabled = false;
             this.TXT_NamaNasabah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TXT_NamaNasabah.Location = new System.Drawing.Point(12, 140);
-            this.TXT_NamaNasabah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_NamaNasabah.Location = new System.Drawing.Point(12, 116);
+            this.TXT_NamaNasabah.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_NamaNasabah.Name = "TXT_NamaNasabah";
             this.TXT_NamaNasabah.Size = new System.Drawing.Size(326, 24);
             this.TXT_NamaNasabah.TabIndex = 1;
@@ -168,12 +172,39 @@
             // 
             this.LBL_NamaNasabah.AutoSize = true;
             this.LBL_NamaNasabah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_NamaNasabah.Location = new System.Drawing.Point(8, 118);
+            this.LBL_NamaNasabah.Location = new System.Drawing.Point(8, 94);
             this.LBL_NamaNasabah.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_NamaNasabah.Name = "LBL_NamaNasabah";
             this.LBL_NamaNasabah.Size = new System.Drawing.Size(116, 20);
             this.LBL_NamaNasabah.TabIndex = 0;
             this.LBL_NamaNasabah.Text = "Nama Nasabah";
+            // 
+            // BTN_Verifikasi
+            // 
+            this.BTN_Verifikasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Verifikasi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Verifikasi.Location = new System.Drawing.Point(12, 223);
+            this.BTN_Verifikasi.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Verifikasi.Name = "BTN_Verifikasi";
+            this.BTN_Verifikasi.Size = new System.Drawing.Size(326, 37);
+            this.BTN_Verifikasi.TabIndex = 6;
+            this.BTN_Verifikasi.Text = "Verifikasi";
+            this.BTN_Verifikasi.UseVisualStyleBackColor = true;
+            this.BTN_Verifikasi.Click += new System.EventHandler(this.BTN_Verifikasi_Click);
+            // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.Enabled = false;
+            this.BTN_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Cancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Cancel.Location = new System.Drawing.Point(12, 268);
+            this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(326, 37);
+            this.BTN_Cancel.TabIndex = 7;
+            this.BTN_Cancel.Text = "Cancel";
+            this.BTN_Cancel.UseVisualStyleBackColor = true;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // UC_VerifNasabah
             // 
@@ -181,9 +212,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LBL_Title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_VerifNasabah";
             this.Size = new System.Drawing.Size(773, 412);
+            this.Load += new System.EventHandler(this.UC_VerifNasabah_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -206,6 +238,8 @@
         private System.Windows.Forms.TextBox TXT_WaktuVerif;
         private System.Windows.Forms.Label LBL_WaktuVerif;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_Status;
+        private System.Windows.Forms.Button BTN_Verifikasi;
+        private System.Windows.Forms.Button BTN_Cancel;
     }
 }

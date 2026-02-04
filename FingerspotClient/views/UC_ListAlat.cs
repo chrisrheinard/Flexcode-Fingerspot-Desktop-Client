@@ -1,5 +1,7 @@
 ﻿using FingerspotClient.models;
 using FingerspotClient.respositories;
+using FingerspotClient.services;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,6 +80,35 @@ namespace FingerspotClient
         private void BTN_Refresh_Click(object sender, EventArgs e)
         {
             LoadDeviceData();
+        }
+
+        private void BTN_Pilih_Click(object sender, EventArgs e)
+        {
+            if (DGV_DeviceList.SelectedRows.Count == 1)
+            {
+                var selectedRow = DGV_DeviceList.SelectedRows[0];
+
+                // Ambil data dari grid
+                string sn = selectedRow.Cells["SerialNumber"].Value?.ToString();
+                string vc = selectedRow.Cells["VerificationCode"].Value?.ToString();
+                string ac = selectedRow.Cells["ActivationCode"].Value?.ToString();
+                string name = selectedRow.Cells["Name"].Value?.ToString();
+
+                // 2. Simpan ke Config (Settings.settings)
+                Properties.Settings.Default.LastDeviceVC = vc;
+                Properties.Settings.Default.LastDeviceAC = ac;
+                Properties.Settings.Default.LastDeviceSN = sn;
+                Properties.Settings.Default.LastDeviceName = name;
+
+                // Jangan lupa di Save agar permanen di App.config
+                Properties.Settings.Default.Save();
+
+                MessageBox.Show($"Berhasil terhubung ke {name} dan tersimpan sebagai default.");
+            }
+            else
+            {
+                MessageBox.Show("Silahkan pilih satu device dari tabel.");
+            }
         }
     }
 }

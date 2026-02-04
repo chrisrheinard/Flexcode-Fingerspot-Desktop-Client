@@ -101,11 +101,12 @@
     <Compile Include="models\VerificationLog.cs" />
     <Compile Include="models\Customer.cs" />
     <Compile Include="models\User.cs" />
-    <Compile Include="respositories\CustomerRepository.cs" />
-    <Compile Include="respositories\DeviceRepository.cs" />
-    <Compile Include="respositories\LogRepository.cs" />
+    <Compile Include="repositories\CustomerRepository.cs" />
+    <Compile Include="repositories\DeviceRepository.cs" />
+    <Compile Include="repositories\LogRepository.cs" />
     <Compile Include="services\AuthService.cs" />
     <Compile Include="services\DatabaseService.cs" />
+    <Compile Include="services\DeviceService.cs" />
     <Compile Include="views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +229,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="FlexCodeSDK">
+      <Guid>{09275F52-48D5-4EA0-9D30-CE4AA8DBDDA7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

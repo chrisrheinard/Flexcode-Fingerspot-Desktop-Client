@@ -45,7 +45,19 @@ namespace FingerspotClient
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Munculkan jendela konfirmasi (Modal)
+            DialogResult result = MessageBox.Show(
+                "Apakah Anda yakin ingin keluar dari aplikasi?",
+                "Konfirmasi Keluar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // Jika user klik 'Yes', maka tutup aplikasinya
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void ButtonMin_Click(object sender, EventArgs e)
