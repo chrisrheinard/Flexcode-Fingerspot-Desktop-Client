@@ -32,10 +32,10 @@
             this.DGV_DeviceList = new System.Windows.Forms.DataGridView();
             this.BTN_Hapus = new System.Windows.Forms.Button();
             this.PanelTombol = new System.Windows.Forms.Panel();
-            this.BTN_Refresh = new System.Windows.Forms.Button();
-            this.BTN_Tambah = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Pilih = new System.Windows.Forms.Button();
+            this.BTN_Refresh = new System.Windows.Forms.Button();
+            this.BTN_Tambah = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_DeviceList)).BeginInit();
             this.PanelTombol.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -96,6 +96,28 @@
             this.PanelTombol.Size = new System.Drawing.Size(773, 50);
             this.PanelTombol.TabIndex = 11;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.BTN_Pilih);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(632, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(141, 50);
+            this.panel1.TabIndex = 14;
+            // 
+            // BTN_Pilih
+            // 
+            this.BTN_Pilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Pilih.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Pilih.Location = new System.Drawing.Point(20, 7);
+            this.BTN_Pilih.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Pilih.Name = "BTN_Pilih";
+            this.BTN_Pilih.Size = new System.Drawing.Size(117, 37);
+            this.BTN_Pilih.TabIndex = 14;
+            this.BTN_Pilih.Text = "Pilih";
+            this.BTN_Pilih.UseVisualStyleBackColor = true;
+            this.BTN_Pilih.Click += new System.EventHandler(this.BTN_Pilih_Click);
+            // 
             // BTN_Refresh
             // 
             this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,28 +143,6 @@
             this.BTN_Tambah.Text = "Tambah";
             this.BTN_Tambah.UseVisualStyleBackColor = true;
             this.BTN_Tambah.Click += new System.EventHandler(this.BTN_Tambah_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.BTN_Pilih);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(632, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 50);
-            this.panel1.TabIndex = 14;
-            // 
-            // BTN_Pilih
-            // 
-            this.BTN_Pilih.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Pilih.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Pilih.Location = new System.Drawing.Point(20, 7);
-            this.BTN_Pilih.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Pilih.Name = "BTN_Pilih";
-            this.BTN_Pilih.Size = new System.Drawing.Size(117, 37);
-            this.BTN_Pilih.TabIndex = 14;
-            this.BTN_Pilih.Text = "Pilih";
-            this.BTN_Pilih.UseVisualStyleBackColor = true;
-            this.BTN_Pilih.Click += new System.EventHandler(this.BTN_Pilih_Click);
             // 
             // UC_ListAlat
             // 

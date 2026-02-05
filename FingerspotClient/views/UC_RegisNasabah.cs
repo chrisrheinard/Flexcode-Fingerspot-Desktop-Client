@@ -25,11 +25,13 @@ namespace FingerspotClient
         private string _secretKey = "BPRCakhra2026"; // Harus sama saat Verifikasi!
         private string _baseFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fp_samples");
         string fileName = "";
-        private Customer _newCustomer;
+        private readonly CustomerRepository _customerRepo;
+        private List<CustomerImage> listGambarFP = new List<CustomerImage>();
 
         public UC_RegisNasabah()
         {
             InitializeComponent();
+            _customerRepo = new CustomerRepository();
         }
 
         private void BTN_TambahNasabah_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace FingerspotClient
         {
             if (Status == RegistrationStatus.r_OK)
             {
-                MessageBox.Show("Success!");
+                CreateNewRecord(TXT_IdNasabah.Text, TXT_NamaNasabah.Text);
                 TXT_IdNasabah.Text = "";
                 TXT_NamaNasabah.Text = "";
                 TXT_IdNasabah.Enabled = true;
@@ -84,7 +86,6 @@ namespace FingerspotClient
                 BTN_Cancel.Enabled = false;
                 template = "";
             }
-
         }
         public void FPReg_FPRegistrationTemplate(String FPTemplate)
         {
@@ -93,6 +94,17 @@ namespace FingerspotClient
         public void FPReg_FPRegistrationImage()
         {
             pictureBox1.Load(Path.Combine(_baseFolder, fileName));
+            if (File.Exists(Path.Combine(_baseFolder, fileName)))
+            {
+                byte[] imageData = File.ReadAllBytes(Path.Combine(_baseFolder, fileName));
+
+                // 3. Masukkan ke List untuk persiapan Simpan ke DB
+                listGambarFP.Add(new CustomerImage
+                {
+                    ImageData = imageData,
+                    ScanOrder = listGambarFP.Count + 1
+                });
+            }
         }
         public void FPReg_FPSamplesNeeded(short Samples)
         {
@@ -101,8 +113,12 @@ namespace FingerspotClient
 
         private void UpdatePath()
         {
-            // Nama file: 20260204_0855.bmp
-            fileName = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".bmp";
+            if (!Directory.Exists(_baseFolder))
+            {
+                Directory.CreateDirectory(_baseFolder);
+            }
+            // Nama file: FP_20260204_0855.bmp
+            fileName = "FP_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".bmp";
             FPReg.PictureSamplePath = Path.Combine(_baseFolder, fileName);
         }
 
@@ -114,11 +130,35 @@ namespace FingerspotClient
             TXT_NamaNasabah.Enabled = true;
             BTN_TambahNasabah.Enabled = true;
             BTN_Cancel.Enabled = false;
+            FPReg.FPRegistrationStop();
+            listGambarFP.Clear();
+            this.template = string.Empty;
+            pictureBox1.Image = null;
         }
 
         private void CreateNewRecord(string id, string name)
         {
+            try
+            {
+                var newCustomer = new Customer
+                {
+                    CbsId = id,
+                    Name = name,
+                    FingerTemplate = template
+                };
 
+                // Kirim ke Repo
+                bool isSuccess = _customerRepo.Create(newCustomer, listGambarFP);
+
+                if (isSuccess)
+                {
+                    MessageBox.Show("Nasabah berhasil didaftarkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

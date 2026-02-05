@@ -70,5 +70,17 @@ namespace FingerspotClient.Properties {
                 this["LastDeviceVC"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LastDeviceId {
+            get {
+                return ((int)(this["LastDeviceId"]));
+            }
+            set {
+                this["LastDeviceId"] = value;
+            }
+        }
     }
 }

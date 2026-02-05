@@ -19,6 +19,39 @@ namespace FingerspotClient.respositories
             _dbService = new DatabaseService();
         }
 
+        public bool Create(VerificationLog log)
+        {
+            using (var conn = _dbService.GetConnection())
+            {
+                conn.Open();
+                // evidence_image biasanya foto hasil capture saat itu (jika ada)
+                string sql = @"INSERT INTO verification_logs 
+                       (customer_id, user_id, device_id, pc_name, verified_at, evidence_image) 
+                       VALUES (@custId, @userId, @devId, @pc, @at, @img)";
+
+                try
+                {
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@custId", log.CustomerId);
+                        cmd.Parameters.AddWithValue("@userId", log.TellerId);
+                        cmd.Parameters.AddWithValue("@devId", log.DeviceId);
+                        cmd.Parameters.AddWithValue("@pc", Environment.MachineName); // Otomatis ambil nama PC
+                        cmd.Parameters.AddWithValue("@at", DateTime.Now);
+
+                        // Jika tidak ada gambar bukti, isi dengan DBNull
+                        cmd.Parameters.AddWithValue("@img", (object)log.EvidenceImage ?? DBNull.Value);
+
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Gagal mencatat log verifikasi: " + ex.Message);
+                }
+            }
+        }
+
         public List<VerificationLog> GetAll()
         {
             var list = new List<VerificationLog>();
