@@ -253,16 +253,5 @@
   <ItemGroup>
     <Folder Include="controllers\" />
   </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="FlexCodeSDK">
-      <Guid>{09275F52-48D5-4EA0-9D30-CE4AA8DBDDA7}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
